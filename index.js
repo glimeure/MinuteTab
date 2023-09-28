@@ -1,5 +1,5 @@
-function addZero(i) {
-	if(i < 10) {i += "0"};
+function addLeadingZero(i) {
+	if(i < 10) {i = "0" + i};
 	return i;
 }
 
@@ -8,8 +8,8 @@ function startTime() {
 	var h = today.getHours();
 	var m = today.getMinutes();
 	var s = today.getSeconds();
-	m = addZero(m);
-	s = addZero(s);
+	m = addLeadingZero(m);
+	s = addLeadingZero(s);
 
 	if(h > 12) {
 		h = h - 12;
